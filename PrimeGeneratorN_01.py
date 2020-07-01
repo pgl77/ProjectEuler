@@ -1,3 +1,8 @@
+MyFile=open('output.txt','w')
+MyFile.write("2")
+MyFile.write('\n')
+MyFile.write("3")
+MyFile.write('\n')
 import datetime
 print("How many primes do you want?")
 N = input()
@@ -14,14 +19,15 @@ while a < N:
             break
         j=j+2
     else:
-        #print j,# " is prime, divisible by 1 and itself", x
-        primes.append(j)
-print(primes)
+        # print j,# " is prime, divisible by 1 and itself", x
+        # primes.append(j)
+        MyFile.write(str(j))
+        MyFile.write('\n')
+# print(primes)
 print(datetime.datetime.now() - begin_time)
 
-MyFile=open('output.txt','w')
-
-for element in primes:
-     MyFile.write(str(element))
-     MyFile.write('\n')
-MyFile.close()
+# MyFile=open('output.txt','w')
+# for element in primes:
+#      MyFile.write(str(element))
+#      MyFile.write('\n')
+# MyFile.close()
