@@ -1,11 +1,25 @@
 # Prime number generator using txt file with primes in already
 # OPEN FILE WITH primes
 primes = []
-lines = open("primes100.txt").readlines()
-for line in lines:
-    primes(line) = int(lines(line))
+sum = 0
+infile = open("primes100.txt", 'r')
+primes = infile.read().splitlines()
+# using list comprehension to
+# perform conversion
+primes = [int(i) for i in primes]
+# for i in primes:
+#     i = i.strip('"')
+#     i = int(i)
+#     sum = sum + i
+
+
+# lines = open("primes100.txt").readlines()
+# for line in lines:
+#     primes(line) = int(lines(line))
 
 print(primes)
+print("----------------")
+print(sum)
 
 # MyFile=open('output.txt','w')
 # MyFile.write("2")
