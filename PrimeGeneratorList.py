@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 # Prime number generator using txt file with primes in already
 # OPEN FILE WITH primes
 import datetime
@@ -23,34 +25,35 @@ begin_time = datetime.datetime.now()
 print(N)
 def CheckAgainstPrimesTxt(fN):
     if fN <= int(primes[-1]):
-        print('We already calculated that prime'
-        print(fN, 'is less than ', primes[-1])
+        print('We already calculated that prime')
+        print("fN") #fN, "is less than ", primes[-1])
         #stretch could be to calc and print nearest prime
         sys.exit()
+        return
 #call function and check if we already have prime in list
 CheckAgainstPrimesTxt(N)
 print('carry on')
 #use prime number list to test for primality
-for a in primes
-
-
-sys.exit()
+#sys.exit()
+# for a in primes:
+# Start from last number in primes list and add 2
+a = primes[-1]
 while a < N:
-    a =a+2
-    j=3
+    a = a+2
     x=a
-    while x > j:
-        if x%j==0 and j!=x:
-            #print x, " is not prime, divisible by ", j
-            break
-        j=j+2
-    else:
-        # print j,# " is prime, divisible by 1 and itself", x
-        # primes.append(j)
-        MyFile.write(str(j))
-        MyFile.write('\n')
-# print(primes)
-# print(datetime.datetime.now() - begin_time)
+    for j in primes:
+
+        while x > j:
+            if x%j==0 and j!=x:
+                print(x, " is not prime, divisible by ", j)
+                break
+            j=j+2
+        else:
+            print(j,# " is prime, divisible by 1 and itself", x)
+            primes.append(j)
+            # MyFile.write(str(j))
+            # MyFile.write('\n')
+print(str(datetime.datetime.now() - begin_time))
 #
 # # MyFile=open('output.txt','w')
 # # for element in primes:
