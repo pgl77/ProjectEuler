@@ -12,7 +12,6 @@ primes = infile.read().splitlines()
 primes = [int(i) for i in primes]
 for i in primes:
     sum += i
-
 print(primes)
 print("----------------")
 print(sum)
@@ -24,28 +23,33 @@ begin_time = datetime.datetime.now()
 print(N)
 def CheckAgainstPrimesTxt(fN):
     if fN <= int(primes[-1]):
+        print('We already calculated that prime'
         print(fN, 'is less than ', primes[-1])
+        #stretch could be to calc and print nearest prime
         sys.exit()
-#call function and check if we already have prime in array
+#call function and check if we already have prime in list
 CheckAgainstPrimesTxt(N)
 print('carry on')
-# a = 3
-# primes = [2,3]
-# while a < N:
-#     a =a+2
-#     j=3
-#     x=a
-#     while x > j:
-#         if x%j==0 and j!=x:
-#             #print x, " is not prime, divisible by ", j
-#             break
-#         j=j+2
-#     else:
-#         # print j,# " is prime, divisible by 1 and itself", x
-#         # primes.append(j)
-#         MyFile.write(str(j))
-#         MyFile.write('\n')
-# # print(primes)
+#use prime number list to test for primality
+for a in primes
+
+
+sys.exit()
+while a < N:
+    a =a+2
+    j=3
+    x=a
+    while x > j:
+        if x%j==0 and j!=x:
+            #print x, " is not prime, divisible by ", j
+            break
+        j=j+2
+    else:
+        # print j,# " is prime, divisible by 1 and itself", x
+        # primes.append(j)
+        MyFile.write(str(j))
+        MyFile.write('\n')
+# print(primes)
 # print(datetime.datetime.now() - begin_time)
 #
 # # MyFile=open('output.txt','w')
