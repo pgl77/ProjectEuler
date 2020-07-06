@@ -5,7 +5,7 @@ MyFile.write("3")
 MyFile.write('\n')
 import datetime
 print("How many primes do you want?")
-N = int(input())
+N = int(input())-1
 begin_time = datetime.datetime.now()
 a = 3
 primes = [2,3]

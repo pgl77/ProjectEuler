@@ -41,19 +41,18 @@ j=0
 while a < N:
     a = a+2
     x=a
-    print("I:a,x,j,N",a,x,j,N)
+    print("I:a,x,j",a,x,j, N)
     StopPoint1 = input()
-    while x > j:
-        for j in primes:
-            print("Ii:a,x,j, N",a,x,j,N)
-            StopPoint1 = input()
-            if x%j==0 and j!=x:
-                print(x, " is not prime, divisible by ", j)
-                print("II:a,x,j,N",a,x,j,N)
-                StopPoint2 = input()
-            elif x%j==0 and j==x:
-                primes.append(x)
-                print(x, " is prime, divisible by 1 and itself", x)
+    for j in primes:
+        print("Ii:a,x,j",a,x,j, N)
+        StopPoint1 = input()
+        if x%j==0 and j!=x:
+            print(x, " is not prime, divisible by ", j)
+            print("II:a,x,j",a,x,j,N)
+            StopPoint2 = input()
+            break
+        print(x, " is prime, divisible by 1 and itself", x)
+    primes.append(x)
     # maybe revisit appending prime to file each time? (only works if I=O file)
     # MyFile.write(str(x))
     # MyFile.write('\n')
