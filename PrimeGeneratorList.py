@@ -1,5 +1,8 @@
 # Prime number generator using txt file with primes in already
 # OPEN FILE WITH primes
+import datetime
+import sys
+
 primes = []
 sum = 0
 infile = open("primes100.txt", 'r')
@@ -7,29 +10,25 @@ primes = infile.read().splitlines()
 # using list comprehension to
 # perform conversion
 primes = [int(i) for i in primes]
-# for i in primes:
-#     i = i.strip('"')
-#     i = int(i)
-#     sum = sum + i
-
-
-# lines = open("primes100.txt").readlines()
-# for line in lines:
-#     primes(line) = int(lines(line))
+for i in primes:
+    sum += i
 
 print(primes)
 print("----------------")
 print(sum)
-
-# MyFile=open('output.txt','w')
-# MyFile.write("2")
-# MyFile.write('\n')
-# MyFile.write("3")
-# MyFile.write('\n')
-# import datetime
-# print("How many primes do you want?")
-# N = input()
-# begin_time = datetime.datetime.now()
+print(primes[-1])
+# Having imported prime list, use it to determine next prime
+print("How many primes do you want?")
+N = int(input())
+begin_time = datetime.datetime.now()
+print(N)
+def CheckAgainstPrimesTxt(fN):
+    if fN <= int(primes[-1]):
+        print(fN, 'is less than ', primes[-1])
+        sys.exit()
+#call function and check if we already have prime in array
+CheckAgainstPrimesTxt(N)
+print('carry on')
 # a = 3
 # primes = [2,3]
 # while a < N:
