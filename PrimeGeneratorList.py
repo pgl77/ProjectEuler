@@ -53,14 +53,11 @@ while a < N:
             break
         # print(x, " is prime, divisible by 1 and itself", x)
     primes.append(x)
-    # print(primes)
-    # print("----------------")
-    # print("III:a,x,j",a,x,j,N)
-    # StopPoint3 = input()
-            # MyFile.write(str(j))
-            # MyFile.write('\n')
+    # maybe revisit appending prime to file each time? (only works if I=O file)
+    # MyFile.write(str(x))
+    # MyFile.write('\n')
 TimeTaken = datetime.datetime.now() - begin_time
-print(datetime.datetime.now() - begin_time)
+# print(datetime.datetime.now() - begin_time)
 print(primes[-1])
 print("primes finish calculation at: ", datetime.datetime.now())
 print(TimeTaken)
